@@ -86,23 +86,25 @@ def messages():
             print("Invalid choice. Please try again.")
 
 def view_messages():
-    print("Messages - View Messages:")
-    if len(messages) == 0:
-        print("No messages found.")
-    else:
-        for message in messages:
-            print(f"From: {message['sender']}, Content: {message['content']}")
-
+    while True:
+        print("Can't view messages for now")
+        print("work in progress...")
+        option = input("Enter 0 to go back")
+        if option == '0':
+            break
 def send_message():
-    print("Messages - Send Message:")
-    recipient = input("Enter the recipient's number: ")
-    content = input("Enter the message content: ")
-    message = {'sender': 'You', 'recipient': recipient, 'content': content}
-    messages.append(message)
-    print("Message sent successfully.")
-
+    while True:
+        print("Can't send message for now")
+        print("work in progress...")
+        option = input("Enter 0 to go back")
+        if option == '0':
+            break
 def chat():
-    print("Chat")
+    while True:
+        print("work in progress...")
+        option = input("Enter 0 to go back")
+        if option == '0':
+            break
 
 def call_register():
     while True:
@@ -220,12 +222,57 @@ def display_settings():
             print("Invalid choice. Please try again.")
 
 def change_wallpaper():
-    print("Settings - Display Settings - Change Wallpaper")
-    # Add your code for changing the wallpaper here
+    while True:
+        print("Settings - Display Settings - Change Wallpaper")
+        print("1: Wyeben")
+        print("2: roses")
+        print("3: blue jean anna")
+        option = input("Enter number (0-4): ")
+
+        if option == '0':
+            print("Going back to the settings menu...")
+            break
+        elif option == '1':
+            Wyeben()
+        elif option == '2':
+            roses()
+        elif option == '3':
+            blue_jean_anna()
+        else:
+            print("Invalid choice: please try again")
+
+
+def Wyeben():
+    while True:
+        print("wallpaper applied successfully")
+        option = input("Enter 0 to go back")
+        if option == '0':
+            break
+
+
+def roses():
+    while True:
+        print("wallpaper applied successfully")
+        option = input("Enter 0 to go back")
+        if option == '0':
+            break
+
+
+def blue_jean_anna():
+    while True:
+        print("wallpaper applied successfully")
+        option = input("Enter 0 to go back")
+        if option == '0':
+            break
+
 
 def adjust_brightness():
-    print("Settings - Display Settings - Adjust Brightness")
-    # Add your code for adjusting the brightness here
+    while True:
+        print("Settings - Display Settings - Adjust Brightness")
+        print("wallpaper applied successfully")
+        option = input("Enter 0 to go back")
+        if option == '0':
+            break
 
 def sound_settings():
     while True:
@@ -246,20 +293,31 @@ def sound_settings():
             print("Invalid choice. Please try again.")
 
 def ringtone_volume():
-    print("Settings - Sound Settings - Ringtone Volume")
-    # Add your code for adjusting the ringtone volume here
-
+    while True:
+        print("Settings - Sound Settings - Ringtone Volume")
+        print("work in progress...")
+        option = input("Enter 0 to go back")
+        if option == '0':
+            break
 def keypad_tones():
-    print("Settings - Sound Settings - Keypad Tones")
-    # Add your code for enabling/disabling keypad tones here
+    while True:
+        print("Settings - Sound Settings - Keypad Tones")
+        print("work in progress...")
+        option = input("Enter 0 to go back")
+        if option == '0':
+            break
 
 # Main program loop
 while True:
     show_menu()
-    option = input("Enter your choice (0-6): ")
+    option = input(f"Work in progress..."
+                   f"Enter your choice (0-6) "
+                   f"please don't forget to send me a mail "
+                   f"on how you'd want me to improve (yila.benson@yahoo.com) "
+                   f"THANK YOU: ")
 
     if option == '0':
-        print("Goodbye!")
+        print("Your nokia is powered off Goodbye!")
         break
     elif option == '1':
         phone_book()
