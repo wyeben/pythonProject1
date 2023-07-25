@@ -307,7 +307,7 @@ def keypad_tones():
         if option == '0':
             break
 
-# Main program loop
+
 while True:
     show_menu()
     option = input(f"Work in progress..."
