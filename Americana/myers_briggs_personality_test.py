@@ -1,6 +1,10 @@
+import random
+
+question_list = []
+
 print("Welcome to myers briggs personality test")
 
-name = input("What is your name?")
+name = input("What is your name?\n")
 
 list_of_questions = ["Expend energy, enjoy groups", "Conserve energy, one-on-one",
                      "Interpret literally", "Look for meaning and possibilities",
@@ -24,8 +28,9 @@ list_of_questions = ["Expend energy, enjoy groups", "Conserve energy, one-on-one
                      "matter of fact, issue oriented", "sensitive, people-oriented, compassionate",
                      "control, govern ", "latitude, freedom"]
 
-for elem in list_of_questions:
-    if elem [0:]:
 
-index = list_of_questions[1]
-print(index)
+for question in range(list_of_questions):
+    question_list += random.choice(list_of_questions)
+question = input(f"enter only A or B\n")
+
+print(question_list)

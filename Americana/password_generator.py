@@ -1,15 +1,40 @@
 import random
 
-alphabets = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
-             'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
-             'W', 'X', 'Y', 'Z']
+from Americana.password_validator import progress_bar_animation, validate_password
 
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-simbols = ['$', '&', '*', '(', ')', '@', '#']
+def generate_password():
+    user_input = int(input(f"Welcome to password generator:\n"
+                           f"How many letters would you want?\n"))
+    user_input2 = int(input("How many numbers do you want?\n"))
+    user_input3 = int(input("How many symbols would you like?\n"))
 
-input("welcome to  password generator")
+    alphabets = ['A', 'b', 'C', 'd', 'E', 'f', 'G', 'H', 'i', 'j', 'K',
+                 'l', 'M', 'n', 'O', 'p', 'q', 'R', 's', 'T', 'u', 'V',
+                 'w', 'x', 'Y', 'z']
 
-alphabets1 = input("enter alphabets")
-numbers1  = input("enter numbers")
-simbols1 = input("enter simbols")
+    numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+    symbols = ['$', '&', '*', '(', ')', '@', '#']
+
+    password_list = []
+
+    for elem in range(1, user_input + 1):
+        password_list += random.choice(alphabets)
+
+    for elem in range(user_input2):
+        password_list += random.choice(numbers)
+
+    for elem in range(user_input3):
+        password_list += random.choice(symbols)
+
+    random.shuffle(password_list)
+
+    password = ""
+    for char in password_list:
+        password += char
+
+    return password
+
+
+
